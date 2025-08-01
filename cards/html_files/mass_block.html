@@ -1,0 +1,125 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+<link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Массовая блокировка</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_m_b">
+                <img class="logo" ></img>
+                <p class="header_text_1_m_b">МАССОВАЯ БЛОКИРОВКА</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="../../requests/html_files/requests.html" class="requests_n">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_1 orange">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_car">
+                    <div class="line_7_car"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_2 orange">карты</a>
+                    <div class="line_8_car"></div>
+                    <a href="accounts.html" class="accounts_n">счета</a>
+                    <div class="line_9_car"></div>
+                    <a href="transactions.html" class="transactions_n">транзакции</a>
+                    <div class="line_10_car"></div>
+                    <a href="operations.html" class="operations_n">операции</a>
+                    <div class="line_11_car"></div>
+                </div>
+                <p class="text_2_m_b">БЛОКИРОВКА/РАЗБЛОКИРОВКА КАРТ</p>
+                <div class="info_m_b">
+                    <table class="table_m_b">
+                        <tr class="tr_m_b headers_m_b">
+                            <td class="td_m_b td_1_m_b"><img class="c_m_m_b" alt=""></td>
+                            <td class="td_m_b td_2_m_b">№ карты</td>
+                            <td class="td_m_b td_3_m_b">статус</td>
+                            <td class="td_m_b td_4_m_b">держатель карты</td>
+                            <td class="td_m_b td_5_m_b">тип карты</td>
+                            <td class="td_m_b td_6_m_b">дата окончания</td>
+                        </tr>
+                        <tr class="tr_m_b str_t_m_b">
+                            <td class="td_m_b td_1_m_b"><img class="c_m_m_b" alt=""></td>
+                            <td class="td_m_b td_2_m_b">5700000002</td>
+                            <td class="td_m_b td_3_m_b">активна</td>
+                            <td class="td_m_b td_4_m_b">Водитель Петров</td>
+                            <td class="td_m_b td_5_m_b">единый баланс</td>
+                            <td class="td_m_b td_6_m_b">01-01-2030</td>
+                        </tr>
+                    </table>
+                    <img class="change_status" alt="">
+                    <img class="block_all" alt="">
+                    <img class="anblock_all" alt="">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script>
+                let print_coupon = document.querySelector(".print_coupon")
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+                let c_ms = document.querySelectorAll(".c_m_m_b")
+                let flags = []
+
+                search_window.style.display = "none"
+
+                for (let i = 0;i < c_ms.length;i++) {
+                    flags.push(false)
+                    c_ms[i].addEventListener('click', function() {
+                        if (flags[i]) {
+                            c_ms[i].style.content = "url(../../dark_assets/radio_check_mark_1.png)"
+                            flags[i] = false
+                        } else {
+                            c_ms[i].style.content = "url(../../dark_assets/radio_check_mark_2.png)"
+                            flags[i] = true
+                        }
+                    })
+                }
+                c_ms[0].addEventListener('click', function() {
+
+                    for (let i = 1;i < c_ms.length;i++) {
+                        if (flags[0]) {
+                            flags[i] = false
+                        } else {
+                            flags[i] = true
+                        }
+                            c_ms[i].click()                        
+                    }
+                });
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+            </script>
+        </footer>
+    </body>
+</html>

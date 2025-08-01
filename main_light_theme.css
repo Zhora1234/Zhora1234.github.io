@@ -1,0 +1,30 @@
+/*ЕСТЬ ВО ВСЕХ*/
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url("fonts/pt_sans_caption.woff2") format("woff2"),
+   url("fonts/pt_sans_caption.woff") format("woff"),
+   url("fonts/pt_sans_caption.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+margin: 0;
+}
+input {
+all: unset;
+}
+a {
+text-decoration: none;
+}
+.win_back {
+left: 0px;
+top: 0px;
+position: relative;
+width: max(1440px,100%);
+background: #EFF0F0;
+margin: 0;
+}
+select {
+all: unset;
+}
+

@@ -1,0 +1,100 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="dark_assets/logo.png" type="image/png">
+        <title>Офис АТП</title>
+        <link rel="stylesheet" href="main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_ind">
+                <div class="wd">
+                    <img class="logo_ind" />
+                    <div class="line_1_ind"></div>
+                    <p class="h_text_1_ind">ДОБРО ПОЖАЛОВАТЬ</p>
+                    <p class="h_text_2_ind">В КАБИНЕТ АДМИНИСТРАТОРА</p>
+                    <div class="info_ind">
+                        <p class="text_2_ind">АВТОРИЗАЦИЯ</p>
+                        <input 
+                            type="text" 
+                            class="index"
+                            placeholder="    логин" 
+                            onfocus="if(this.value === '    логин') this.value = ''" 
+                            onblur="if(this.value === '') this.value = '    логин'"
+                            value="    логин"
+                        >
+                        <input
+                            type="text"
+                            class="password_ind"
+                            placeholder="    пароль"
+                            value="    пароль"
+                        >
+                        <img class="c_m_ind" />
+                        <p class="password_show_text">показать пароль</p>
+                        <img class="sing_in" alt="">
+                        <a class="reg">регистрация</a>
+                        <a class="vost_p">восстановление пароля</a>
+                    </div>    
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script>
+                let password = document.querySelector('.password_ind')
+                let p_s = false
+                let sing_in = document.querySelector(".sing_in")
+                let c_ms = document.querySelectorAll(".c_m_ind")
+                let flags = []
+
+                for (let i = 0;i < c_ms.length;i++) {
+                    flags.push(false)
+                    c_ms[i].addEventListener('click', function() {
+                        if (flags[i]) {
+                            c_ms[i].style.content = "url(../../dark_assets/radio_check_mark_1.png)"
+                            flags[i] = false
+                        } else {
+                            c_ms[i].style.content = "url(../../dark_assets/radio_check_mark_2.png)"
+                            flags[i] = true
+                        }
+                    })
+                }
+
+                sing_in.addEventListener('click', function() {
+                    window.location.href = "requests/html_files/requests.html"
+                })
+
+                password.addEventListener('focus', function() {
+                    if(password.value === password.placeholder) {
+                        password.value = ''
+                    }
+                    if (p_s){
+                        password.type = 'text'
+                    } else {
+                        password.type = 'password'
+                    }
+                })
+                
+                password.addEventListener('blur', function() {
+                    if(password.value === '') {
+                        password.value = password.placeholder
+                        password.type = 'text'
+                    }
+                })
+
+                document.querySelector('.c_m_ind').addEventListener('click', function() {
+                    if (p_s) {
+                        p_s = false
+                        if (password.value != password.placeholder) {password.type = 'password'}
+                    } else {
+                        p_s = true
+                        password.type = 'text'
+                    }
+                })
+
+            </script>
+        </footer>
+    </body>
+</html>

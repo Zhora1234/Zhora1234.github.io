@@ -1,0 +1,129 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+<link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Операции</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_ope">
+                <img class="logo" ></img>
+                <p class="header_text_1_ope">ОПЕРАЦИИ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="../../requests/html_files/requests.html" class="requests_n">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_1 orange">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_car">
+                    <div class="line_7_car"></div>
+                    <a href="t_cards.html" class="cards_n_2">карты</a>
+                    <div class="line_8_car"></div>
+                    <a href="accounts.html" class="accounts_n">счета</a>
+                    <div class="line_9_car"></div>
+                    <a href="transactions.html" class="transactions_n">транзакции</a>
+                    <div class="line_10_car"></div>
+                    <a href="operations.html" class="operations_n orange">операции</a>
+                    <div class="line_11_car"></div>
+                </div>
+                <div class="info_ope">
+                    <p class="t_i_ope" id="card_t_ope">выберите карту</p>
+                    <input class="card_ope" type="text">
+                    <p class="t_i_ope" id="wallet_t_ope">или выберите кошелек</p>
+                    <input class="wallet_ope" type="text">
+                    <p class="t_i_ope" id="azs_t_ope">выберите операцию</p>
+                    <input class="azs_ope" type="text">
+                    <p class="t_i_ope" id="start_date_t_ope">начало периода</p>
+                    <input class="start_date_ope" type="date">
+                    <span class="open_button_1_ope">
+                        <img type="button" class="button_o_ope"  />
+                    </span>
+                    <p class="t_i_ope" id="end_date_t_ope">конец периода</p>
+                    <input class="end_date_ope" type="date">
+                    <span class="open_button_2_ope">
+                        <img type="button" class="button_o_ope"  />
+                    </span>
+                    <img class="check_mark_ope" alt="">
+                    <img class="X_ope" alt="">
+                    <table class="table_ope">
+                        <tr class="headers_ope">
+                            <td class="td_ope">идентификатор</td>
+                            <td class="td_ope">операция</td>
+                            <td class="td_ope">дата и время операции</td>
+                            <td class="td_ope">владелец</td>
+                            <td class="td_ope">номер карты</td>
+                            <td class="td_ope">кошелек</td>
+                            <td class="td_ope">держатель карты</td>
+                            <td class="td_ope">сумма</td>
+                            <td class="td_ope">комментарии</td>
+                            <td class="td_ope">статус</td>
+                            <td class="td_ope">баланс после</td>
+                        </tr>
+                        <tr class="str_t_1_ope">
+                            <td class="td_ope">65875</td>
+                            <td class="td_ope">АИ92</td>
+                            <td class="td_ope">11-03-2025 17:39</td>
+                            <td class="td_ope">Водитель Иванов</td>
+                            <td class="td_ope">5700000004</td>
+                            <td class="td_ope">5700000004</td>
+                            <td class="td_ope">Водитель Иванов</td>
+                            <td class="td_ope">-10</td>
+                            <td class="td_ope">продажа</td>
+                            <td class="td_ope">0</td>
+                            <td class="td_ope">490</td>
+                        </tr>
+                    </table>
+                    <div class="line_12_ope"></div>
+                    <div class="line_13_ope"></div>
+                    <img class="copy_ope" alt="">
+                    <img class="cvs_ope" alt="">
+                </div>
+            </div>
+            </div>
+        </main>
+        <footer>
+            <script>
+                let print_coupon = document.querySelector(".print_coupon")
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+
+                search_window.style.display = "none"
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+            </script>
+        </footer>
+    </body>
+</html>

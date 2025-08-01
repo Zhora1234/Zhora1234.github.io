@@ -1,0 +1,77 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Печать талонов</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_p_c">
+                <img class="logo" ></img>
+                <p class="header_text_1_p_c">ПЕЧАТЬ ТАЛОНОВ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="requests.html" class="requests_n orange">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_req">
+                    <div class="line_7_req"></div>
+                    <a href="coupon_orders.html" class="coupon_order_n orange">заказы талонов</a>
+                    <div class="line_8_req"></div>
+                    <a href="transaction_log.html" class="transaction_log_n">журнал транзакций</a>
+                    <div class="line_9_req"></div>
+                </div>
+                <p class="text_2_p_c">подготовьте принтер к печати нажмите кнопку</p>
+                <img class="print_c" />
+                <div class="line_10_p_c"></div>
+                <p class="text_3_p_c">проверьте все ли талоны распечатаны<br> и нажмите кнопку ОК или распечатайте снова</p>
+                <img class="ok" />
+             </div>
+        </main>
+        <footer>
+            <script>
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+                let coupon_order = document.querySelector(".coupon_order")
+
+                search_window.style.display = "none"
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+            </script>
+        </footer>
+    </body>
+</html>

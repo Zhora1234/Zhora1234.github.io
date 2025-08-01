@@ -1,0 +1,130 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Заказы талонов</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_c_o">
+                <img class="logo" ></img>
+                <p class="header_text_1_c_o">ЗАКАЗЫ ТАЛОНОВ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="requests.html" class="requests_n orange">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_req">
+                    <div class="line_7_req"></div>
+                    <a class="coupon_order_n orange">заказы талонов</a>
+                    <div class="line_8_req"></div>
+                    <a href="transaction_log.html" class="transaction_log_n">журнал транзакций</a>
+                    <div class="line_9_req"></div>
+                </div>
+                <p class="subheader_text_1_c_o">ТАЛОНЫ ЗАКАЗ № 10002</p>
+                <div class="info_c_o">
+                    <table class="table_1_c_o">
+                        <tr class="tr_c_o headers_c_o">
+                            <td class="td_c_o td_1_c_o">тип</td>
+                            <td class="td_c_o td_2_c_o">цена</td>
+                            <td class="td_c_o td_3_c_o">объем л</td>
+                            <td class="td_c_o td_4_c_o">число талонов</td>
+                            <td class="td_c_o td_5_c_o">сумма</td>
+                            <td class="td_c_o td_6_c_o">дата оканчания</td>
+                            <td class="td_c_o td_7_c_o">статус</td>
+                        </tr>
+                        <tr class="tr_c_o t_info">
+                            <td class="td_c_o td_1_c_o"></td>
+                            <td class="td_c_o td_2_c_o"></td>
+                            <td class="td_c_o td_3_c_o"></td>
+                            <td class="td_c_o td_4_c_o"></td>
+                            <td class="td_c_o td_5_c_o"></td>
+                            <td class="td_c_o td_6_c_o"></td>
+                            <td class="td_c_o td_7_c_o"></td>
+                        </tr>
+                    </table>
+                    <p class="warning_1">Внимание!</p>
+                    <p class="w_t" id="warning_2">Если талоны уже были напечатаны при печати будет выводиться пометка Дубликат.</p>     
+                    <p class="w_t" id="warning_3">Риск утраты хищения и копирования Электронных талонов переходит к покупателю с момента их создания на этом сайте.</p>
+                    <p class="w_t" id="warning_4">Все операции третьих лиц с этими талонами на АЗС будут считаться выполненными Покупателем.</p>
+                    <p class="w_t" id="warning_5">Поставщик не несет ответственности за потери и убытки Покупателя в связи с несанкционированным использованием данных Электронных талонов третьими лицами.</p>
+                    <div class="line_10_c_o"></div>
+                    <table class="table_2_c_o">
+                        <tr class="tr_c_o headers_c_o" id="h_2">
+                            <td class="td_c_o td_2_1">индентификатор</td>
+                            <td class="td_c_o td_2_2">номер</td>
+                            <td class="td_c_o td_2_3">заказ</td>
+                            <td class="td_c_o td_2_4">объем л</td>
+                            <td class="td_c_o td_2_5">дата окончания</td>
+                            <td class="td_c_o td_2_6">распечатан</td>
+                            <td class="td_c_o td_2_7">печать</td>
+                        </tr>
+                        <tr class="tr_c_o t_info" id="i_2">
+                            <td class="td_c_o td_2_1"></td>
+                            <td class="td_c_o td_2_2"></td>
+                            <td class="td_c_o td_2_3"></td>
+                            <td class="td_c_o td_2_4"></td>
+                            <td class="td_c_o td_2_5"></td>
+                            <td class="td_c_o td_2_6"></td>
+                            <td class="td_c_o td_2_7"></td>
+                        </tr>
+                    </table>
+                    <div class="line_11_c_o"></div>
+                </div>
+                <img class="print_coupon"  />
+                
+            </div>
+        </main>
+        <footer>
+            <script>
+                let print_coupon = document.querySelector(".print_coupon")
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+
+                search_window.style.display = "none"
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+                print_coupon.addEventListener('click', function() {
+                    window.location.href = 'print_coupon.html'
+                })
+
+
+
+            </script>
+        </footer>
+    </body>
+</html>

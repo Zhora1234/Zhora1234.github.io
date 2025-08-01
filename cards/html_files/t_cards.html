@@ -1,0 +1,112 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+<link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Топливные карты</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_t_c">
+                <img class="logo" ></img>
+                <p class="header_text_1_car">ТОПЛИВНЫЕ КАРТЫ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="../../requests/html_files/requests.html" class="requests_n">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_1 orange">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_car">
+                    <div class="line_7_car"></div>
+                    <a href="t_cards.html" class="cards_n_2 orange">карты</a>
+                    <div class="line_8_car"></div>
+                    <a href="accounts.html" class="accounts_n">счета</a>
+                    <div class="line_9_car"></div>
+                    <a href="transactions.html" class="transactions_n">транзакции</a>
+                    <div class="line_10_car"></div>
+                    <a href="operations.html" class="operations_n">операции</a>
+                    <div class="line_11_car"></div>
+                </div>
+                <table class="c_info">
+                    <tr class="headers_car">
+                        <td class="td_1_car">№ карты</td>
+                        <td class="td_2_car">дата окончания</td>
+                        <td class="td_3_car">держатель карты</td>
+                        <td class="td_4_car">статус</td>
+                        <td class="td_5_car">кошельки</td>
+                    </tr>
+                    <tr class="o_info">
+                        <td class="td_1_car">5700000002</td>
+                        <td class="td_2_car">бессрочная</td>
+                        <td class="td_3_car">
+                            <input class="holder_car" type="text">
+                        </td>
+                        <td class="td_4_car">
+                            <select name="" id="state">
+                                <option value="">активна</option>
+                                <option value="">заблокирована в лк</option>
+                                <option value="">утеряна</option>
+                            </select>
+                        </td>
+                        <td class="td_5_car"><a href="cards_wallet.html" class="wallet_car">КОШЕЛЕК</a></td>
+                    </tr>
+                </table>
+                <img class="m_b"  />
+                <img class="r_c"  />
+            </div>
+        </main>
+        <footer>
+            <script>
+                let print_coupon = document.querySelector(".print_coupon")
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+                let mass_block = document.querySelector(".m_b")
+                let registry_cards = document.querySelector(".r_c")
+
+                search_window.style.display = "none"
+
+                mass_block.addEventListener('click', function() {
+                    window.location.href = "mass_block.html"
+                })
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+                registry_cards.addEventListener("click", function() {
+                    window.location.href = "cards_registry.html"
+                })
+
+            </script>
+        </footer>
+    </body>
+</html>

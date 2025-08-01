@@ -1,0 +1,121 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Реквизиты</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_det">
+                <img class="logo" ></img>
+                <p class="header_text_1_det">РЕКВИЗИТЫ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="../../requests/html_files/requests.html" class="requests_n">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_1">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings orange">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_set">
+                    <div class="line_7_set"></div>
+                    <a href="details.html" class="details_n orange">реквизиты</a>
+                    <div class="line_8_set"></div>
+                    <a href="documents.html" class="documents_n">документы</a>
+                    <div class="line_9_set"></div>
+                    <a href="change_password.html" class="change_password_n">смена пароля</a>
+                    <div class="line_10_set"></div>
+                    <a href="language.html" class="language_n">язык</a>
+                    <div class="line_11_set"></div>
+                    <a href="design.html" class="design_n">оформление</a>
+                    <div class="line_12_set"></div>
+                </div>
+                <div class="info_det">
+                    <div class="recv_1_det">
+                        <P id="r_t_1_det" class="r_t_h_det">РЕКВИЗИТЫ</P>
+                        <P id="r_t_2_det" class="r_t_det">название компании</P>
+                        <P id="r_t_3_det" class="r_t_det">директор/представитель</P>
+                        <P id="r_t_4_det" class="r_t_det">id номер</P>
+                        <P id="r_t_5_det" class="r_t_det">адрес</P>
+                        <P id="r_t_6_det" class="r_t_det">телефон</P>
+                        <P id="r_t_7_det" class="r_t_det">e-mail</P>
+                        <input id="r_i_1_det" class="r_i_det" type="text" name="" id="">
+                        <input id="r_i_2_det" class="r_i_det" type="text" name="" id="">
+                        <input id="r_i_3_det" class="r_i_det" type="text" name="" id="">
+                        <input id="r_i_4_det" class="r_i_det" type="text" name="" id="">
+                        <input id="r_i_5_det" class="r_i_det" type="text" name="" id="">
+                        <input id="r_i_6_det" class="r_i_det" type="text" name="" id="">
+                    </div>
+                    <div class="recv_2_det">
+                        <p id="r_t_8_det" class="r_t_h_det">КОНТАКТЫ</p>
+                        <p id="r_t_9_det" class="r_t_det">ваши ФИО</p>
+                        <p id="r_t_10_det" class="r_t_det">ваш телефон</p>
+                        <p id="r_t_11_det" class="r_t_det">ваш e-mail</p>
+                        <input id="r_i_7_det" class="r_i_det" type="text" name="">
+                        <input id="r_i_8_det" class="r_i_det" type="text" name="">
+                        <input id="r_i_9_det" class="r_i_det" type="text" name="">
+                    </div>
+                    <img class="c_m_det" alt="">
+                    <p class="rcm_t_det">я подтверждаю, что разрешаю ООО «Лукойл-Грузия» собирать, обрабатывать, использовать и хранить мою личную информацию.</p>
+                    <img class="change_det" alt="">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script>
+                let print_coupon = document.querySelector(".print_coupon")
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+                let c_ms = document.querySelectorAll(".c_m_det")
+                let flags = []
+
+                search_window.style.display = "none"
+
+                for (let i = 0;i < c_ms.length;i++) {
+                    flags.push(false)
+                    c_ms[i].addEventListener('click', function() {
+                        if (flags[i]) {
+                            c_ms[i].style.content = "url(../../dark_assets/radio_check_mark_1.png)"
+                            flags[i] = false
+                        } else {
+                            c_ms[i].style.content = "url(../../dark_assets/radio_check_mark_2.png)"
+                            flags[i] = true
+                        }
+                    })
+                }
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+            </script>
+        </footer>
+    </body>
+</html>

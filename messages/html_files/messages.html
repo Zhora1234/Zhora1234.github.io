@@ -1,0 +1,109 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Сообщения</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_mes">
+                <img class="logo" ></img>
+                <p class="header_text_1_mes">СООБЩЕНИЯ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="../../requests/html_files/requests.html" class="requests_n">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_1">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages orange">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <table class="table_mes">
+                    <tr class="headers_mes">
+                        <td class="td_1_mes row_1_mes"><img class="c_m_mes" alt=""></td>
+                        <td class="td_2_mes row_1_mes">прочитано</td>
+                        <td class="td_3_mes row_1_mes">дата</td>
+                        <td class="td_4_mes row_1_mes" id="td_4_h_mes">сообщения</td>
+                    </tr>
+                    <tr class="str_t_1_mes">
+                        <td class="td_1_mes row_2_mes"><img class="c_m_mes"  ></td>
+                        <td class="td_2_mes row_2_mes"></td>
+                        <td class="td_3_mes row_2_mes">11-03-2025</td>
+                        <td class="td_4_mes row_2_mes"><span class="t_header_mes">СРОЧНОЕ УВЕДОМЛЕНИЕ</span><br>Уведомляем Вас, что Вам необходимо прочитать это!</td>
+                    </tr>
+                    <tr class="str_t_2_mes">
+                        <td class="td_1_mes row_3_mes"><img class="c_m_mes"  ></td>
+                        <td class="td_2_mes row_3_mes"></td>
+                        <td class="td_3_mes row_3_mes">11-03-2025</td>
+                        <td class="td_4_mes row_3_mes"><span class="t_header_mes" >ТЕКСТОВОЕ УВЕДОМЛЕНИЕ</span><br>Добрый день! Добро пожаловать в Личный кабинет!</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <script>
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+                let c_ms = document.querySelectorAll(".c_m_mes")
+                let flags = []
+
+                search_window.style.display = "none"
+
+                for (let i = 0;i < c_ms.length;i++) {
+                    flags.push(false)
+                    c_ms[i].addEventListener('click', function() {
+                        if (flags[i]) {
+                            c_ms[i].style.content = "url(../../dark_assets/radio_check_mark_1.png)"
+                            flags[i] = false
+                        } else {
+                            c_ms[i].style.content = "url(../../dark_assets/radio_check_mark_2.png)"
+                            flags[i] = true
+                        }
+                    })
+                }
+                c_ms[0].addEventListener('click', function() {
+
+                    for (let i = 1;i < c_ms.length;i++) {
+                        if (flags[0]) {
+                            flags[i] = false
+                        } else {
+                            flags[i] = true
+                        }
+                            c_ms[i].click()                        
+                    }
+                });
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+            </script>
+        </footer>
+    </body>
+</html>

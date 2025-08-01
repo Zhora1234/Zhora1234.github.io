@@ -1,0 +1,96 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Новая заявка</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_n_r">
+                <img class="logo" ></img>
+                <p class="header_text_1_n_r">НОВАЯ ЗАЯВКА</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div class="line_1"></div>
+                <div class="nav">
+                    <div class="line_2"></div>
+                    <a href="requests.html" class="requests_n orange">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_1">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+
+                <p class="accounts">СЧЕТА</p>
+                <div class="line_7_n_r"></div>
+                <p class="e_t">ЭЛЕКТРОННЫЕ ТАЛОНЫ</p>
+                <div class="line_8_n_r"></div>
+                <p class="b_t">БУМАЖНЫЕ ТАЛОНЫ</p>
+                <div class="line_9_n_r"></div>
+
+                <div class="card_s" id="card">
+                    <p id="card_tt" class="c_title">карта</p>
+                    <p id="card_mt" class="m_text">количество</p>
+                    <input class="input_n_r" id="card_i">
+                </div>
+                <div class="card_s" id="AI92_s">
+                    <p id="AI92_s_t" class="c_title">АИ92</p>
+                    <p id="AI92_s_mt" class="m_text">литры</p>
+                    <input class="input_n_r" id="AI92_s_i">
+                </div>
+                <div class="card_t" id="AI92_e">
+                    <p id="AI92_e_t" class="c_title">АИ92</p>
+                    <p id="AI92_e_mt1" class="m_text">номинал, л</p>
+                    <input class="input_n_r" id="AI92_e_i_1">
+                    <p id="AI92_e_mt2" class="m_text">количество</p>
+                    <input class="input_n_r" id="AI92_e_i_2">
+                </div>
+                <div class="card_t" id="AI92_b">
+                    <p id="AI92_b_t" class="c_title">АИ92 10л</p>
+                    <p id="AI92_b_mt1" class="m_text">количество</p>
+                    <input class="input_n_r" id="AI92_b_i_1">
+                    <p id="AI92_b_mt2" class="m_text">объем, л</p>
+                    <input class="input_n_r" id="AI92_b_i_2">
+                </div>
+                <img class="create_request" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+
+        </main>
+        <footer>
+            <script>
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search") 
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+                let win_back = document.querySelector(".win_back")
+
+                search_window.style.display = "none"
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                })
+            
+
+            </script>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+<link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Реестр карт</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_c_r">
+                <img class="logo" ></img>
+                <p class="header_text_1_c_r">РЕЕСТР КАРТ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="../../requests/html_files/requests.html" class="requests_n">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_1 orange">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_car">
+                    <div class="line_7_car"></div>
+                    <a href="t_cards.html" class="cards_n_2 orange">карты</a>
+                    <div class="line_8_car"></div>
+                    <a href="accounts.html" class="accounts_n">счета</a>
+                    <div class="line_9_car"></div>
+                    <a href="transactions.html" class="transactions_n">транзакции</a>
+                    <div class="line_10_car"></div>
+                    <a href="operations.html" class="operations_n">операции</a>
+                    <div class="line_11_car"></div>
+                </div>
+                <div class="info_c_r">
+                    <table class="table_c_r">
+                        <tr class="headers_c_r">
+                            <td class="td_c_r">Номер карты</td>
+                            <td class="td_c_r">Тип карты</td>
+                            <td class="td_c_r">Дата начала действия</td>
+                            <td class="td_c_r">Дата окончания</td>
+                            <td class="td_c_r">Дата последнего пополнения</td>
+                            <td class="td_c_r">Держатель карты</td>
+                            <td class="td_c_r">Статус</td>
+                        </tr>
+                        <tr class="t_str_c_r">
+                            <td class="td_c_r">5700000002</td>
+                            <td class="td_c_r">Единый баланс</td>
+                            <td class="td_c_r">11-03-2025</td>
+                            <td class="td_c_r">01-01-1970</td>
+                            <td class="td_c_r">11-03-2025</td>
+                            <td class="td_c_r">Водитель Петров</td>
+                            <td class="td_c_r">Активна</td>
+                        </tr>
+                    </table>
+                    <img class="copy_c_r" alt="">
+                    <img class="cvs_c_r" alt="">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script>
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+
+                search_window.style.display = "none"
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+            </script>
+        </footer>
+    </body>
+</html>

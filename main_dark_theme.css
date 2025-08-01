@@ -1,0 +1,222 @@
+/*ЕСТЬ ВО ВСЕХ*/
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url("fonts/pt_sans_caption.woff2") format("woff2"),
+   url("fonts/pt_sans_caption.woff") format("woff"),
+   url("fonts/pt_sans_caption.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+margin: 0;
+}
+input {
+all: unset;
+}
+a {
+text-decoration: none;
+}
+.win_back {
+left: 0px;
+top: 0px;
+position: relative;
+width: 100%;
+background: #43434A;
+margin: 0;
+}
+select {
+all: unset;
+}
+.wd {
+width: 440px;
+position: absolute;
+background: #43434A;
+}
+
+/*index*/
+j {
+
+}
+.wb_h_ind {
+  height: max(857px);
+}
+.logo_ind {
+content: url('dark_assets/ind_logo.png');
+position: absolute;
+top: 0;
+width: 26.4vw;
+left: 36.8vw;
+}
+.line_1_ind {
+position: absolute;
+width: 351px;
+height: 0px;
+left: calc(50% - 351px/2 + 0.5px);
+top: 117px;
+
+border: 2px solid #989DAE;
+}
+.h_text_1_ind {
+position: absolute;
+width: 278px;
+height: 102px;
+left: calc(50% - 278px/2 + 1px);
+top: 90px;
+
+font-family: 'PT Sans Caption';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 52px;
+text-align: center;
+
+color: #FFFFFF;
+}
+.h_text_2_ind {
+position: absolute;
+width: 373px;
+height: 134px;
+left: calc(50% - 373px/2 + 0.5px);
+top: 192px;
+
+font-family: 'PT Sans Caption';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 52px;
+text-align: center;
+
+color: #FFFFFF;
+}
+.info_ind {
+position: absolute;
+width: 284px;
+height: 463px;
+left: calc(50% - 284px/2);
+top: 384px;
+
+background: #5C5D69;
+border-radius: 7px;
+}
+.text_2_ind {
+position: absolute;
+width: 194px;
+height: 40px;
+left: calc(50% - 194px/2);
+top: calc(50% - 40px/2 - 169.5px - 20px);
+
+font-family: 'PT Sans Caption';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+
+color: #D9D9D9;
+}
+.index {
+position: absolute;
+width: 225px;
+height: 40px;
+left: calc(50% - 225px/2 - 0.5px);
+top: calc(50% - 40px/2 - 112.5px);
+
+background: #43434A;
+border-radius: 7px;
+
+font-family: 'PT Sans Caption';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+
+color: #989DAE;
+}
+.sing_in {
+content: url('dark_assets/sing_in.png');
+
+position: absolute;
+width: 225px;
+height: 40px;
+left: 28px;
+top: 285px;
+}
+.password_ind {
+position: absolute;
+width: 205px;
+height: 40px;
+left: calc(50% - 225px/2 - 0.5px);
+top: calc(50% - 40px/2 - 44.5px);
+
+background: #43434A;
+border-radius: 7px;
+padding-left: 10px;
+padding-right: 10px;
+
+font-family: 'PT Sans Caption';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+
+color: #989DAE;
+}
+.c_m_ind {
+content: url('dark_assets/radio_check_mark_1.png');
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: calc(50% - 20px/2 - 103px);
+top: calc(50% - 20px/2 + 0.5px);
+}
+.password_show_text {
+position: absolute;
+width: 108px;
+height: 17px;
+left: calc(50% - 108px/2 - 32px);
+top: calc(50% - 17px/2 - 13px);
+
+font-family: 'PT Sans Caption';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 17px;
+/* identical to box height */
+
+color: #989DAE;
+}
+.reg {
+position: absolute;
+width: 127px;
+height: 26px;
+left: calc(50% - 127px/2 + 1.5px);
+top: calc(50% - 26px/2 + 149.5px);
+
+font-family: 'PT Sans Caption';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+/* identical to box height */
+text-align: center;
+
+color: #989DAE;
+}
+.vost_p {
+position: absolute;
+width: 242px;
+height: 26px;
+left: calc(50% - 242px/2 + 1px);
+top: calc(50% - 26px/2 + 185.5px);
+
+font-family: 'PT Sans Caption';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+/* identical to box height */
+text-align: center;
+
+color: #989DAE;
+}

@@ -1,0 +1,141 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+<link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Заявки</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css"> 
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_req">
+                <img class="logo" ></img>
+                <p class="header_text_1_req">ЗАЯВКИ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div class="line_1"></div>
+                <div class="nav">
+                    <div class="line_2"></div>
+                    <a href="" class="requests_n orange">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards">карты</a>
+                    <div class="line_4"></div>
+                    <a href='/messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                    <div class="new_request_1"><img ></img></div>
+                <div class="type">
+                    <label for="agreementType" class="control-label_1">тип</label>
+                    <select  class="form-control" name="agreementType" id="agreementType">
+						<option class="" value="">все</option>
+                        <option value="CARD">карты</option>
+                        <option value="TALONE">талоны</option>
+                        <option selected value="MIXED">карты и талоны</option>
+                    </select>
+                </div>
+                <div class="date-start">
+                    <label for="date" class="control-label_2">начало периода</label>
+					<input type="date" class="form-control" id="dateStart" name="dateStart" value="">
+                    <span class="open_button">
+                        <img type="button" class="button_o"  />
+                    </span>
+                </div>
+                <div class="date-end">
+                    <label for="date" class="control-label_3">конец периода</label>
+					<input type="date" class="form-control" id="dateEnd" name="dateEnd" value="">
+                    <span class="open_button">
+                        <img type="button" class="button_o"  />
+                    </span>
+                </div>
+                <div class="status">
+                    <label for="statuses" class="control-label_4">Статус заявки</label>
+						<select class="form-control" name="status" id="status">
+						    <option value="">все</option>
+                            <option value="Unknown" >неизвестный тип</option>
+                            <option value="New" >новый</option>
+                            <option value="Sended" >отправлено</option>
+                            <option value="Confirmed" >подтверждено</option>
+                            <option value="Paid" >оплачено</option>
+                            <option value="Done" >выполнено</option>
+                            <option value="Expired" >просрочено</option>
+                            <option value="Rejected" >отклонена</option>
+                            <option value="PaymentReceived" >оплата поступила</option>
+                            </select>
+                </div>
+                <img class="check_mark_req" ></img>
+                <img class="X" ></img>
+
+                <table class="columns">
+                <tr class="row">
+                    <td class="td_1">№ заявки</td>
+                    <td class="td_1">тип</td>
+                    <td class="td_1">дата/время</td>
+                    <td class="td_1">статус</td>
+                    <td class="td_1">сумма</td>
+                    <td class="td_1">ожидаемая дата оплаты</td>
+                    <td class="td_1">оплачено</td>
+                    <td class="td_1">менеджер</td>
+                    <td class="td_1">счета</td>
+                </tr>
+                <tr class="request">
+                    <td class="td_1">1</td>
+                    <td class="td_1">карты и талоны</td>
+                    <td class="td_1">11-03-2025 17:33</td>
+                    <td class="td_1">новый</td>
+                    <td class="td_1">2500.00</td>
+                    <td class="td_1">11-03-2025 17:33</td>
+                    <td class="td_1">оплачено</td>
+                    <td class="td_1">горшкова а.с.</td>
+                    <td class="td_1">счета</td>
+                </tr>
+            </table>
+            <div  class="search_w">
+                <img class="loupe"  />
+                <input class="search_i">
+            </div>
+
+
+        </main>
+        <footer>
+            <script>
+                let new_request = document.querySelector(".new_request_1")
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+                let request = document.querySelector(".request")
+                let win_back = document.querySelector(".win_back")
+
+                search_window.style.display = "none"
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                })
+            
+
+                new_request.addEventListener("click", function() {
+                    window.location.href = "new_request.html"
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+                request.addEventListener('click', function() {
+                    window.location.href = "request_see.html"
+                })
+            </script>
+        </footer>
+    </body>
+</html>

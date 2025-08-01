@@ -1,0 +1,127 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+<link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Кошельки карты</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_c_w">
+                <img class="logo" ></img>
+                <p class="header_text_1_c_w">КОШЕЛЬКИ КАРТЫ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="../../requests/html_files/requests.html" class="requests_n">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_1 orange">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_car">
+                    <div class="line_7_car"></div>
+                    <a href="t_cards.html" class="cards_n_2 orange">карты</a>
+                    <div class="line_8_car"></div>
+                    <a href="accounts.html" class="accounts_n">счета</a>
+                    <div class="line_9_car"></div>
+                    <a href="transactions.html" class="transactions_n">транзакции</a>
+                    <div class="line_10_car"></div>
+                    <a href="operations.html" class="operations_n">операции</a>
+                    <div class="line_11_car"></div>
+                </div>
+                <div class="info_c_w">
+                    <div class="c_w">
+                        <img class="wallet_c_w" alt="">
+                        <p class="wallet_text_c_w">Кошельки карты<br>№ 5700000002</p>
+                    </div>
+                    <div class="c_d">
+                        <img class="driver_c_w" alt="">
+                        <p class="driver_text_c_w">Водитель<br>Петров</p>
+                    </div>
+                    <p class="text_2_c_w">денежный (лич)</p>
+                    <table class="info_t_c_w">
+                        <tr class="headers_c_w">
+                            <td class="td_c_w">название</td>
+                            <td class="td_c_w">тип</td>
+                            <td class="td_c_w">баланс</td>
+                            <td class="td_c_w">резерв</td>
+                            <td class="td_c_w">овердрафт</td>
+                            <td class="td_c_w">дата последнего использования</td>
+                            <td class="td_c_w">расход за сегодня</td>
+                            <td class="td_c_w">расход за месяц</td>
+                        </tr>
+                        <tr class="card_str_c_w">
+                            <td class="td_c_w"></td>
+                            <td class="td_c_w"></td>
+                            <td class="td_c_w"></td>
+                            <td class="td_c_w"></td>
+                            <td class="td_c_w"></td>
+                            <td class="td_c_w"></td>
+                            <td class="td_c_w"></td>
+                            <td class="td_c_w"></td>
+                        </tr>
+                    </table>
+                    <p class="day_limit_t_c_w">дневной лимит сум</p>
+                    <input class="day_limit_i_c_w">
+                    <p class="week_limit_t_c_w">недельный лимит сум</p>
+                    <input class="week_limit_i_c_w">
+                    <p class="month_limit_t_c_w">месячный лимит сум</p>
+                    <input class="month_limit_i_c_w">
+
+                </div>
+                <img class="transfer_c_w" alt="" />
+                <img class="new_wallet_c_w" alt="" />
+            </div>
+        </main>
+        <footer>
+            <script>
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+                let transfer = document.querySelector(".transfer_c_w")
+                let new_wallet = document.querySelector('.new_wallet_c_w')
+
+                search_window.style.display = "none"
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+                transfer.addEventListener('click', function() {
+                    window.location.href = "transfer.html"
+                })
+
+                new_wallet.addEventListener('click', function() {
+                    window.location.href = "new_wallet.html"
+                })
+
+            </script>
+        </footer>
+    </body>
+</html>

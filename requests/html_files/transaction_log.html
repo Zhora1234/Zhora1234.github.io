@@ -1,0 +1,110 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+<link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Заказы талонов</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_t_l">
+                <img class="logo" ></img>
+                <p class="header_text_1_t_l">ЖУРНАЛ ТРАНЗАКЦИЙ</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="requests.html" class="requests_n orange">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_req">
+                    <div class="line_7_req"></div>
+                    <a href="coupon_orders.html" class="coupon_order_n">заказы талонов</a>
+                    <div class="line_8_req"></div>
+                    <a class="transaction_log_n orange">журнал транзакций</a>
+                    <div class="line_9_req"></div>
+                </div>
+                <p class="text_2_t_l">журнал транзакций по топливным талонам</p>
+                <div class="info_t_l">
+                    <p class="type_t">тип транзакций</p>
+                    <input class="type_i" type="text">
+                    <p class="AZS">АЗС</p>
+                    <input class="AZS_i" type="text">
+                    <p class="fuel">топливо</p>
+                    <input class="fuel_i" type="text">
+                    <p class="data_start_t_l">начало периода</p>
+                    <input class="data_start_i" type="date">
+                    <span class="open_button_1_t_l">
+                        <img type="button" class="button_o_1_t_l"/>
+                    </span>
+                    <p class="data_end_t_l">конец периода</p>
+                    <input class="data_end_i" type="date">
+                    <span class="open_button_2_t_l">
+                        <img type="button" class="button_o_2_t_l"/>
+                    </span>
+                    <img class="check_mark_t_l"  />
+                    <img class="X_t_l"  />
+                    <table class="transactions">
+                        <tr>
+                            <td class="td_1_t_l">талон №</td>
+                            <td class="td_2_t_l">тип</td>
+                            <td class="td_3_t_l">АЗС</td>
+                            <td class="td_4_t_l">номер кассы</td>
+                            <td class="td_5_t_l">товар</td>
+                            <td class="td_6_t_l">тип транзакции</td>
+                            <td class="td_7_t_l">дата/время</td>
+                            <td class="td_8_t_l">количество</td>
+                            <td class="td_9_t_l">ценна</td>
+                            <td class="td_10_t_l">сумма продаж</td>
+                            <td class="td_11_t_l">сумма скидки</td>
+                        </tr>
+                    </table>
+                    <div class="line_10_t_l"></div>
+                    <div class="line_11_t_l"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script>
+                let print_coupon = document.querySelector(".print_coupon")
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+
+                search_window.style.display = "none"
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+            </script>
+        </footer>
+    </body>
+</html>

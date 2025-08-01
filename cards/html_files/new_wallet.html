@@ -1,0 +1,118 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+<link rel="icon" href="../../dark_assets/logo.png" type="image/png">
+        <title>Новый кошелек</title>
+        <link rel="stylesheet" href="../../main_dark_theme.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="win_back wb_h_n_w">
+                <img class="logo" ></img>
+                <p class="header_text_1_n_w">НОВЫЙ КОШЕЛЕК</p>
+                <img class="exit" ></img>
+                <img class="search" ></img>
+                <div  class="search_w">
+                    <img class="loupe"  />
+                    <input class="search_i">
+                </div>
+                <div class="line_1"></div>
+                <div class="nav_1">
+                    <div class="line_2"></div>
+                    <a href="../../requests/html_files/requests.html" class="requests_n">заявки</a>
+                    <div class="line_3"></div>
+                    <a href="../../cards/html_files/t_cards.html" class="cards_n_1 orange">карты</a>
+                    <div class="line_4"></div>
+                    <a href='../../messages/html_files/messages.html' class="messages">сообщения</a>
+                    <div class="messages_count"><p class="messages_count_text">2</p></div>
+                    <div class="line_5"></div>
+                    <a href="../../settings/html_files/details.html" class="settings">настройки</a>
+                    <div class="line_6"></div>
+                </div>
+                <div class="nav_2_car">
+                    <div class="line_7_car"></div>
+                    <a href="t_cards.html" class="cards_n_2 orange">карты</a>
+                    <div class="line_8_car"></div>
+                    <a href="accounts.html" class="accounts_n">счета</a>
+                    <div class="line_9_car"></div>
+                    <a href="transactions.html" class="transactions_n">транзакции</a>
+                    <div class="line_10_car"></div>
+                    <a href="operations.html" class="operations_n">операции</a>
+                    <div class="line_11_car"></div>
+                </div>
+                <div class="info_n_w">
+                    <div class="wallet_d_n_w">
+                        <img class="wallet_img_n_w" alt="">
+                        <p class="text_2_n_w">НОВЫЙ КОШЕЛЕК/СЧЕТ</p>
+                        <select class="type_n_w" name="" id="">
+                            <option class="select_type" selected value="">выберите тип</option>
+                            <option value="">АИ92</option>
+                            <option value="">АИ95</option>
+                            <option value="">ДТ</option>
+                            <option value="">СУВГ</option>
+                            <option value="">денежный</option>
+                        </select>
+                        <p class="radio_btn_t_n_w">привязать к общему счету</p>
+                        <img class="radio_btn_n_w" alt="">
+                    </div>
+                    <p class="day_limit_n_w">дневной лимит</p>
+                    <input class="day_limit_i_n_w" type="text">
+                    <p class="week_limit_n_w">недельный лимит</p>
+                    <input class="week_limit_i_n_w" type="text">
+                    <p class="month_limit_n_w">месячный лимит</p>
+                    <input class="month_limit_i_n_w" type="text">
+                    <p class="comment_n_w">комментарий</p>
+                    <input class="comment_i_n_w" type="text">
+                    <img class="create_n_w" alt="">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script>
+                let print_coupon = document.querySelector(".print_coupon")
+                let exit = document.querySelector(".exit")
+                let search = document.querySelector(".search")
+                let search_window = document.querySelector(".search_w")
+                let search_input = document.querySelector(".search_i")
+                let type = document.querySelector('.type_n_w')
+                let sel_type = document.querySelector('.select_type') 
+                let radio_btn = document.querySelector('.radio_btn_n_w')
+                let f = false
+
+                sel_type.style.display = 'none'
+
+                search_window.style.display = "none"
+
+                radio_btn.addEventListener('click', function() {
+                    if (f) {
+                        radio_btn.style.content = "url('../../dark_assets/radio_check_mark_1.png')"
+                        f = false
+                    } else {
+                        radio_btn.style.content = "url('../../dark_assets/radio_check_mark_2.png')"
+                        f = true
+                    }
+                    
+                })
+
+                search.addEventListener('click', function() {
+                    search_window.style.display = "block"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px - 180px)"
+                    search_input.focus()
+                })
+
+                search_input.addEventListener('blur', function() {
+                    search_window.style.display = "none"
+                    search_window.style.left = "calc(50% + 1339px/2 - 40px)"
+                    search_input.value = ""
+                })
+
+                exit.addEventListener("click", function() {
+                    window.location.href = "/index.html"
+                })
+
+            </script>
+        </footer>
+    </body>
+</html>
